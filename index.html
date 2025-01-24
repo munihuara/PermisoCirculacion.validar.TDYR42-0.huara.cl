@@ -68,15 +68,13 @@
     // Función para actualizar la fecha del último acceso
     function updateLastAccess() {
         const lastAccessElement = document.getElementById('last-access');
-        const lastAccess = localStorage.getItem('lastAccess');
-        if (lastAccess) {
-            lastAccessElement.textContent = new Date(lastAccess).toLocaleString();
-        } else {
-            lastAccessElement.textContent = 'N/A';
-        }
         const now = new Date();
+        lastAccessElement.textContent = now.toLocaleString();
         localStorage.setItem('lastAccess', now);
     }
 
     // Llamar a la función al cargar la página
-    document.addEventListener('DOMContentLoaded[_{{{CITATION{{{_1{](https://github.com/la9una/web/tree/ba1073ae044ebb7b538a3b13f0f9598f7c410bb6/docs%2Fbootstrap%2Falignci.md)[_{{{CITATION{{{_2{](https://github.com/CLONATORE/markdowns/tree/82cfb03683ceb807a7091de48045e6a7485acd72/webpack.md)[_{{{CITATION{{{_3{](https://github.com/balajiravimaz/Hotel_site/tree/bdd5609c7e1c1b33d77bc8fa9c1fdb2c6f3016c8/includes%2Fvideo-header.php)[_{{{CITATION{{{_4{](https://github.com/Cojol0511/votuyen/tree/ff55369aa9c28e96bc6bebeb42166f4e2384d67a/header.php)[_{{{CITATION{{{_5{](https://github.com/timothyorvin/taspencorpu4/tree/6916c891cfc894dc97cf260c3cdad000f6694ad6/resources%2Fviews%2Fupload.blade.php)[_{{{CITATION{{{_6{](https://github.com/azkanab/pokedex/tree/de98e1e9386034ef0442e38ed4f4b8d7f1a80ccf/src%2Fstyle%2FMyPokemon%2FRemoveModal.js)[_{{{CITATION{{{_7{](https://github.com/fazush/FazilatSayt/tree/5d5e143e73c34c4422955c576c9e8dd60625fe5f/Cstyle.php)[_{{{CITATION{{{_8{](https://github.com/DMCE606/aviraljain606.github.io/tree/32be65881ec5c71da56ec91f75d7ff2bef27da77/courses.php)[_{{{CITATION{{{_9{](https://github.com/witallo02/crud/tree/31a8a0d25603f904877f879fd8dcde38dc45bd8d/editar.php)[_{{{CITATION{{{_10{](https://github.com/jacquestrdx/githubdte/tree/17345db16f42e40c66becbaee1c5f5a8ecbcdfcf/resources%2Fviews%2Flayouts%2Fapp.blade.php)
+    document.addEventListener('DOMContentLoaded', updateLastAccess);
+    </script>
+</body>
+</html>
