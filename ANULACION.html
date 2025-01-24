@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anulación de Permiso de Circulación</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-color: #e74c3c;
+      --warning-color: #f39c12;
+      --bg-color: #f3f7fa;
+      --container-bg: #ffffff;
+      --container-bg-gradient: linear-gradient(135deg, #ffffff, #f5f8fb);
+      --text-color: #333;
+      --font-family: 'Roboto', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-family);
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      animation: shake 2s;
+      animation-iteration-count: infinite;
+    }
+
+    .container {
+      background: var(--container-bg-gradient);
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 400px;
+      max-width: 90%;
+      animation: fadeIn 1s ease-in-out;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .warning-icon {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+      animation: rotateIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes rotateIn {
+      from {
+        transform: rotate(-200deg);
+        opacity: 0;
+      }
+      to {
+        transform: rotate(0deg);
+        opacity: 1;
+      }
+    }
+
+    @keyframes shake {
+      0% { transform: translate(1px, 1px) rotate(0deg); }
+      10% { transform: translate(-1px, -2px) rotate(-1deg); }
+      20% { transform: translate(-3px, 0px) rotate(1deg); }
+      30% { transform: translate(3px, 2px) rotate(0deg); }
+      40% { transform: translate(1px, -1px) rotate(1deg); }
+      50% { transform: translate(-1px, 2px) rotate(-1deg); }
+      60% { transform: translate(-3px, 1px) rotate(0deg); }
+      70% { transform: translate(3px, 1px) rotate(-1deg); }
+      80% { transform: translate(-1px, -1px) rotate(1deg); }
+      90% { transform: translate(1px, 2px) rotate(0deg); }
+      100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }
+
+    .contact-button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      background-color: var(--primary-color);
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .contact-button:hover {
+      background-color: #c0392b;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="warning-icon">
+      <svg viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" fill="#f39c12">
+        <circle cx="512" cy="512" r="512"/>
+        <path d="M682.688 136.512l-390.176 390.208-156.8-156.8 390.208-390.176 156.8 156.8zM896 896l-512 128-128-512 512-128 128 512z"/>
+      </svg>
+    </div>
+    <h1>Anulación de Permiso</h1>
+    <p>El usuario de la placa <strong>XXXX75</strong> presenta anulación en su permiso de circulación por presentar documentación falsa y no pagar el valor del permiso de circulación. <br><br> Queda prohibida su circulación.</p>
+    <a href="mailto:munihuaraqr@gmail.com" class="contact-button">Contactar</a>
+  </div>
+</body>
+</html>
